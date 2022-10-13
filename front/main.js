@@ -12,6 +12,10 @@ var LAST_PREDICTION = ""
 
 var win = null;
 
+API_BACKEND_IA_PROD = '0.0.0.0:9000'
+API_BACKEND_IA_DEV = 'http://192.168.1.26:9000'
+
+
 API_HYH = 'http://x2023hearyourhome520328821002.francecentral.cloudapp.azure.com:8000';
 
 wifi.init({
@@ -184,7 +188,7 @@ const registerCaptorAPI = (username, password) => {
 
 const getLastPrediction = async () =>  {
   setInterval(async() => {
-    await axios.get('http://192.168.1.26:9000').then((response) => {
+    await axios.get(API_BACKEND_IA_PROD).then((response) => {
       //console.log(response);
       LAST_PREDICTION = response.data
       console.log("On send", LAST_PREDICTION)
