@@ -132,6 +132,7 @@ const createInternetConnectionWindow = () => {
       enableRemoteModule: false,
       preload: path.join(__dirname ,'preload.js'),
     },
+    fullscreen: true,
     width: 480,
     height: 320
   });
