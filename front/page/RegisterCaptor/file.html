@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>HYHs</title>
+    <!-- <link href="file.scss" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="global-login">
+        <div class="grid-login">
+          <div class="part2 parts">
+            <div class="p-header">
+              <div class="line"></div>
+              <div class="title">
+                <h2 id="ping-good-response">Step 3 - Register ur device</h2>
+                </div>
+              <div class="line"></div>
+            </div>
+            <form id="register-captor"  class="p-body">
+              <div class="body-input">
+                <div class="input-p"> 
+                  <input type="text" name="captorCode" value="" placeholder=""/>
+                </div>
+              </div>
+                <button id="button-submit-register" type="submit">Connect</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="./../../renderer.js"></script>
+  </body>
+</html>

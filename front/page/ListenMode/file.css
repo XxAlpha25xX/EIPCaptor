@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'Bebas Neue';
+	src: local(''), url('../../font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+.quit {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+	z-index: 100;
+}
+
+ .globale {
+	 background: black;
+	 height: 100vh;
+	 width: 100vw;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-template-rows: 2fr 1fr;
+	 grid-column-gap: 0px;
+	 grid-row-gap: 0px;
+	 position: relative;
+}
+ .globale .time-date {
+	 position: absolute;
+	font-family: 'Bebas Neue';
+	 right: 0%;
+	 top: 0%;
+	 margin: 10px 10px 0 0px;
+	 color: white;
+}
+ .globale .version {
+	 position: absolute;
+	font-family: 'Bebas Neue';
+	 left: 0%;
+	 top: 0%;
+	 color: white;
+	 margin: 10px 0 0 10px;
+}
+ .globale .result-prediction {
+	 display: flex;
+	 flex-direction: column;
+	 flex-wrap: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .globale .result-prediction .pred {
+	 display: flex;
+	 justify-content: center;
+	 align-items: baseline;
+	 font-size: 2em;
+	 font-family: 'Bebas Neue', cursive;
+}
+ .globale .result-prediction .pred .subject {
+	 font-size: inherited;
+	 font-family: 'Bebas Neue', cursive;
+	 color: #92ff92;
+}
+ .globale .result-prediction .pred .other {
+	 font-size: inherited;
+	 font-family: 'Bebas Neue', cursive;
+	 margin-left: 20px;
+	 color: white;
+}
+ .history-predictions {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 overflow: hidden;
+}
+ .history-predictions .history-prediction {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: baseline;
+	 justify-content: space-around;
+	 width: 60%;
+}
+ h1, h3 {
+	color: white;
+	font-family: 'Bebas Neue';
+
+}
+p {
+	font-family: 'Bebas Neue';
+	color: cyan;
+}
+ body {
+	 margin: 0;
+	 padding: 0;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>HYHs</title>
+    <link href="./file.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="global-login">
+      <div class="quit">
+        <button id="quit">QUIT</button>
+      </div>
+        <div class="grid-login">
+          <div class="part2 parts">
+            <div class="p-header">
+              <div class="line"></div>
+              <div class="title">
+                <h2>Log in</h2>
+                </div>
+              <div class="line"></div>
+            </div>
+            <form id="loginFormAPIConnection" class="p-body">
+              <div class="body-input">
+                <div class="input-p">
+                  <input type="email" name="username" value="vincent.vega@gmail.com" placeholder="Email ex: username@hyh.com"/>
+                </div>
+                <div class="input-p">
+                  <input type="password"  name="password" value="password" placeholder="password"/>
+                </div>
+              </div>
+      
+              <div class="body-footer">
+                <button id="button-login-hyh" type="submit">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="./../../renderer.js"></script>
+  </body>
+</html>
