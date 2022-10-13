@@ -12,7 +12,7 @@ var LAST_PREDICTION = ""
 
 var win = null;
 
-API_BACKEND_IA_PROD = '0.0.0.0:9000'
+API_BACKEND_IA_PROD = 'http://0.0.0.0:9000'
 API_BACKEND_IA_DEV = 'http://192.168.1.26:9000'
 
 
