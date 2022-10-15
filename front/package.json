@@ -13,6 +13,7 @@
     "autoprefixer": "^10.4.12",
     "axios": "^0.27.2",
     "css-loader": "^6.7.1",
+    "electron-secure-virtual-keyboard": "^1.4.1",
     "node-sass": "^7.0.3",
     "node-wifi": "^2.0.16",
     "postcss-loader": "^7.0.1",

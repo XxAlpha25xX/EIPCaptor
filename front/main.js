@@ -6,8 +6,10 @@ const dns = require('dns');
 const electron = require('electron');
 const { resolve } = require('path');
 const fs = require('fs');
+const { setupVirtualKeyboard } = require('electron-secure-virtual-keyboard');
 
 var LAST_PREDICTION = ""
+var virtualKeyboard = null;
 
 
 var win = null;
@@ -248,6 +250,7 @@ ipcMain.on('connectWifiNetwork', (event, value) => {
 })
 
 
+virtualKeyboard = setupVirtualKeyboard(ipcMain);
 
 ipcMain.on('authHYHAPI', (e, value) => {
   let data = JSON.parse(value);
