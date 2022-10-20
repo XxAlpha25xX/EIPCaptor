@@ -12,9 +12,17 @@ from flask import Flask, json, request, jsonify
 import json
 import requests
 
+IS_PROD = True
+
 MODEL_PATH = "model.h5"
 CLASS_PATH = "classes.npy"
 OUTPUT_PATH = "output.wav"
+
+MODEL_PATH_PROD = "/home/hyh/Documents/HYH-IA/model.h5"
+CLASS_PATH_PROD = "/home/hyh/Documents/HYH-IA/classes.npy"
+OUTPUT_PATH_PROD = "/home/hyh/Documents/HYH-IA/output.wav"
+
+
 LAST_PREDICTION = ""
 SAMPLE_RATE = 44100
 SECONDS = 4
@@ -65,6 +73,14 @@ def guessSound(filename, leP, modelP):
     print(f'Predicted Class => {printClass(le, np.argmax(pre))}')
     return printClass(le, np.argmax(pre))
     
+
+def setEnvironement():
+    if IS_PROD == True:
+       MODEL_PATH = MODEL_PATH_PROD
+       CLASS_PATH = CLASS_PATH_PROD
+       OUTPUT_PATH = OUTPUT_PATH_PROD
+
+setEnvironement()
 
 app = Flask(__name__)
 

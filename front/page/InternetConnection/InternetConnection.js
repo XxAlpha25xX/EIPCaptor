@@ -42,6 +42,7 @@ function getWifi() {
                 return list.find(a => a.ssid === ssid)
             })
             let i = 0;
+            console.log(withoutDuplicateList);
             for (const elem of withoutDuplicateList) {
                 var opt = document.createElement("option");
                 opt.value = i;
