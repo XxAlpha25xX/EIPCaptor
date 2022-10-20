@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <title>HYHs</title>
+    <link href="RegisterSensor.css" rel="stylesheet">
+    <link href="../Sensor.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>HEARYOURHOME</h1>
+    <form>
+        <input type="text" id="SensorName" placeholder="Name ex: SensorKitchen" />
+        <div class="icons-container">
+            <h3 class="labelForm">Select an icon</h3>
+            <button class="btn" type="button" id="KITCHEN">
+        <img src="../../img/KITCHEN.svg" alt="KITCHEN"/>
+      </button>
+            <button class="btn" type="button" id="BEDROOM_BABY">
+        <img src="../../img/BEDROOM_BABY.svg" alt="BEDROOM_BABY"/>
+      </button>
+            <button class="btn" type="button" id="BEDROOM_PARENT">
+        <img src="../../img/BEDROOM_PARENT.svg" alt="BEDROOM_PARENT"/>
+      </button>
+            <button class="btn" type="button" id="LIVINGROOM">
+        <img src="../../img/LIVINGROOM.svg" alt="LIVINGROOM"/>
+      </button>
+            <button class="btn" type="button" id="GARAGE">
+        <img src="../../img/GARAGE.svg" alt="GARAGE"/>
+      </button>
+            <button class="btn" type="button" id="BATHROOM">
+        <img src="../../img/BATHROOM.svg" alt="BATHROOM"/>
+      </button>
+        </div>
+        <div class="select-container">
+            <h3 class="labelForm">Select a color</h3>
+            <select id="color" class="color">
+        <option value="RED" class="red" selected></option>
+        <option value="GREEN" class="green"></option>
+        <option value="PURPLE" class="purple"></option>
+        <option value="YELLOW" class="yellow"></option>
+        <option value="DARK_BLUE" class="dark_blue"></option>
+        <option value="BLACK" class="black"></option>
+      </select>
+        </div>
+        <h3 class="warn" id="invalid">Invalid Sensor</h3>
+        <button type="button" id="create"><h3>Create</h3></button>
+    </form>
+    <button id="quit"><h3>QUIT</h3></button>
+    <script src="RegisterSensor.js"></script>
+</body>
+
+</html>

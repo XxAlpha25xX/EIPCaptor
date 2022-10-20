@@ -7,11 +7,12 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "19.0.0"
+    "electron": "^19.0.0"
   },
   "dependencies": {
     "autoprefixer": "^10.4.12",
     "axios": "^0.27.2",
+    "brightness": "^3.0.0",
     "css-loader": "^6.7.1",
     "electron-secure-virtual-keyboard": "^1.4.1",
     "node-sass": "^7.0.3",

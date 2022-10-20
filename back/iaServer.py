@@ -12,9 +12,9 @@ from flask import Flask, json, request, jsonify
 import json
 import requests
 
-MODEL_PATH = "/home/hyh/Documents/HYH-IA/model.h5"
-CLASS_PATH = "/home/hyh/Documents/HYH-IA/classes.npy"
-OUTPUT_PATH = "/home/hyh/Documents/HYH-IA/output.wav"
+MODEL_PATH = "model.h5"
+CLASS_PATH = "classes.npy"
+OUTPUT_PATH = "output.wav"
 LAST_PREDICTION = ""
 SAMPLE_RATE = 44100
 SECONDS = 4
@@ -76,9 +76,13 @@ def terminate():
 
 @app.route("/", methods=['GET'])
 def getLastPrediction():
-    myrecording = sd.rec(int(SECONDS * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=2)
-    sd.wait()
-    write(OUTPUT_PATH, SAMPLE_RATE, myrecording)  #
+    try:
+        myrecording = sd.rec(int(SECONDS * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=2)
+        sd.wait()
+        write(OUTPUT_PATH, SAMPLE_RATE, myrecording)  #
+    except Exception as err:
+        print("[Error] Fail to record sound on this device !")
+        print(err)
     res = guessSound(OUTPUT_PATH, CLASS_PATH, MODEL_PATH)
     obj = {"prediction" : res}
     LAST_PREDICTION = res.strip('\'[]')

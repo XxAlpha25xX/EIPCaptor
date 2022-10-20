@@ -1,0 +1,54 @@
+.red {
+    background-color: rgb(160, 0, 0);
+}
+
+.green {
+    background-color: rgb(50, 115, 50);
+}
+
+.purple {
+    background-color: rgb( 90, 60, 140);
+}
+
+.yellow {
+    background-color: rgb(190, 195, 30);
+}
+
+.dark_blue {
+    background-color: rgb(40, 60, 80);
+}
+
+.black {
+    background-color: rgb(0, 0, 0);
+}
+
+select {
+    display: inline-block;
+    width: 10em;
+}
+
+.color {
+    background-color: rgb(160, 0, 0);
+}
+
+.select-container {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.select-container h3,
+.select-container select {
+    grid-row: 1;
+}
+
+.icons-container button {
+    border-radius: 20px;
+    padding: 1em;
+    background-color: #f7e2e2;
+}
+
+.labelForm {
+    color: black;
+}

@@ -1,0 +1,63 @@
+h1,
+h3,
+p,
+.text,
+h2 {
+    color: #f7e2e2;
+}
+
+.lastPrediction {
+    display: block;
+    text-align: center;
+}
+
+.btn {
+    margin: auto;
+    background-color: #61a4bc;
+    border: 0px;
+}
+
+.sound-recognition {
+    width: 100%;
+    text-align: center;
+}
+
+.section-container {
+    width: 100%;
+    text-align: center;
+    display: grid;
+}
+
+.section {
+    display: inline-block;
+    grid-row: 1;
+    text-align: center;
+}
+
+.section button {
+    display: block;
+    margin: auto;
+}
+
+.infos {
+    width: 100%;
+    display: grid;
+    text-align: center;
+}
+
+.info {
+    grid-row: 1;
+    text-align: center;
+    margin: auto;
+}
+
+.color {
+    background-color: red;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.sound {
+    visibility: hidden;
+}

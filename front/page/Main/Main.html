@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HYHs</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://xxxx 'unsafe-inline' 'unsafe-eval';">
+    <link href="Main.css" rel="stylesheet">
+    <link href="../Sensor.css" rel="stylesheet">
+</head>
+
+<body id="body">
+    <h1 class="content">HEARYOURHOME</h1>
+    <div class="infos">
+        <img src="../../img/KITCHEN.svg" alt="KITCHEN" class="info content" id="picto" />
+        <h2 id="sensor-name" class="info content">Name of the device:</h2>
+        <div id="color" class="color info content"></div>
+    </div>
+    <div class="sound-recognition">
+        <button type="button" class="btn content" id="btn-sound">
+            <img src="./../../img/MICOFF.svg" alt="MICOFF" id="sound-img" class="content"/>
+        </button>
+    </div>
+    <h1 id="sound" class="sound"></h1>
+    <h3 class="lastPrediction content" id="lastPrediction1"></h3>
+    <h3 class="lastPrediction content" id="lastPrediction2"></h3>
+    <h3 class="lastPrediction content" id="lastPrediction3"></h3>
+    <div class="section-container">
+        <div class="section">
+            <h3 id="wifi-status" class="content">Wifi: ????????????????</h3>
+            <a href="../InternetConnection/InternetConnection.html">
+                <button class="content">
+                    <h3 class="content">Switching wifi</h3>
+                </button>
+            </a>
+        </div>
+        <div class="section">
+            <h3 id="user-status" class="content">Username: ????????????????</h3>
+            <button id='logout' class="content">
+                <h3 id="user-option-log" class="content">Logout</h3>
+            </button>
+        </div>
+    </div>
+    <script src="Main.js"></script>
+</body>
+
+</html>
