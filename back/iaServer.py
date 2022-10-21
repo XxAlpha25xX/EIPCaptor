@@ -75,7 +75,7 @@ def guessSound(filename, leP, modelP):
     
 
 def setEnvironement():
-    if IS_PROD == True:
+    if IS_PROD is True:
        MODEL_PATH = MODEL_PATH_PROD
        CLASS_PATH = CLASS_PATH_PROD
        OUTPUT_PATH = OUTPUT_PATH_PROD
