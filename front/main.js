@@ -31,8 +31,8 @@ const createWindow = () => {
             width: 480,
             height: 320
         });
-        win.loadFile('./page/InternetConnection/APIConnection.html');
-    }, 20 * 1000)
+        win.loadFile('./page/APIConnection/APIConnection.html');
+    }, 2 * 1000)
 
     virtualKeyboard = setupVirtualKeyboard(ipcMain);
 
