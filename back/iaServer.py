@@ -69,14 +69,6 @@ def guessSound(filename, leP, modelP):
     return printClass(le, np.argmax(pre))
     
 
-def setEnvironement():
-    if IS_PROD is True:
-       MODEL_PATH = MODEL_PATH_PROD
-       CLASS_PATH = CLASS_PATH_PROD
-       OUTPUT_PATH = OUTPUT_PATH_PROD
-
-setEnvironement()
-
 app = Flask(__name__)
 
 @app.route("/terminate", methods=['GET'])
