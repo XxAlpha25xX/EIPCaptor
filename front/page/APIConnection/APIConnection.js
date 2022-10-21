@@ -73,7 +73,7 @@ var body_id = document.getElementById('body-id');
 if (input_password) {
     input_password.addEventListener('focus', (event) => { 
         if (keyboard_layout) {
-            tag = 1;
+            tag = 2;
             keyboard_layout.classList.add('visible');
             keyboard_layout.classList.remove('invisible');
         }
@@ -83,7 +83,7 @@ if (input_password) {
 if (input_email) {
     input_email.addEventListener('focus', (event) => { 
         if (keyboard_layout) {
-            tag = 2;
+            tag = 1;
             keyboard_layout.classList.add('visible');
             keyboard_layout.classList.remove('invisible');
         }

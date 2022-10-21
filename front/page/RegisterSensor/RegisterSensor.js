@@ -131,3 +131,45 @@ function resetCSS() {
 IconSelect = 'KITCHEN';
 KITCHEN.style.border = '3px solid black';
 KITCHEN.style.backgroundColor = '#61a4bc';
+
+
+const Keyboard = window.SimpleKeyboard.default;
+const KeyboardLayouts = window.SimpleKeyboardLayouts.default;
+var tag = 0
+const layout = new KeyboardLayouts().get("french");
+
+const myKeyboard = new Keyboard({
+  onChange: input => onChange(input),
+  onKeyPress: button => onKeyPress(button),
+  ...layout
+});
+
+function onChange(input) {
+    document.querySelector("#SensorName").value = input;
+    console.log("Input changed", input);
+
+}
+
+function onKeyPress(button) {
+  console.log("Button pressed", button);
+  if (button === "{enter}") {
+    if (keyboard_layout) {
+        keyboard_layout.classList.add('invisible');
+        keyboard_layout.classList.remove('visible');
+    }
+  }
+}
+
+var input_password = document.getElementById('SensorName');
+var keyboard_layout = document.getElementById('keyboard-layout');
+var body_id = document.getElementById('body-id');
+
+if (input_password) {
+    input_password.addEventListener('focus', (event) => { 
+        if (keyboard_layout) {
+            tag = 1;
+            keyboard_layout.classList.add('visible');
+            keyboard_layout.classList.remove('invisible');
+        }
+    });
+}

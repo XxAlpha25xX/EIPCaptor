@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <title>HYHs</title>
     <link href="RegisterSensor.css" rel="stylesheet">
     <link href="../Sensor.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
 </head>
 
 <body>
     <h1>HEARYOURHOME</h1>
+    <div class="simple-keyboard invisible" id="keyboard-layout"></div>
     <form>
         <input type="text" id="SensorName" placeholder="Name ex: SensorKitchen" />
         <div class="icons-container">
@@ -50,6 +50,8 @@
         <button type="button" id="create"><h3>Create</h3></button>
     </form>
     <button id="quit"><h3>QUIT</h3></button>
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard-layouts@latest/build/index.min.js"></script>
     <script src="RegisterSensor.js"></script>
 </body>
 

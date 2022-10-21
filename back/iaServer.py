@@ -92,6 +92,7 @@ def terminate():
 
 @app.route("/", methods=['GET'])
 def getLastPrediction():
+    setEnvironement()
     try:
         myrecording = sd.rec(int(SECONDS * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=2)
         sd.wait()
