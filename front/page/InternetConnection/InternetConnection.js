@@ -86,3 +86,44 @@ ipcRenderer.invoke('ping', {}).then((res) => {
     window.location.href = '../APIConnection/APIConnection.html'
 }).catch(error => {
 })
+
+
+const Keyboard = window.SimpleKeyboard.default;
+const KeyboardLayouts = window.SimpleKeyboardLayouts.default;
+
+const layout = new KeyboardLayouts().get("french");
+
+const myKeyboard = new Keyboard({
+  onChange: input => onChange(input),
+  onKeyPress: button => onKeyPress(button),
+  ...layout
+});
+
+function onChange(input) {
+  document.querySelector("#password").value = input;
+  console.log("Input changed", input);
+}
+
+function onKeyPress(button) {
+  console.log("Button pressed", button);
+  if (button === "{enter}") {
+    if (keyboard_layout) {
+        keyboard_layout.classList.add('invisible');
+        keyboard_layout.classList.remove('visible');
+    }
+  }
+}
+
+
+var input_password = document.getElementById('password');
+var keyboard_layout = document.getElementById('keyboard-layout');
+var body_id = document.getElementById('body-id');
+
+if (input_password) {
+    input_password.addEventListener('focus', (event) => { 
+        if (keyboard_layout) {
+            keyboard_layout.classList.add('visible');
+            keyboard_layout.classList.remove('invisible');
+        }
+    });
+}

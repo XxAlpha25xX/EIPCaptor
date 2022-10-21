@@ -62,3 +62,21 @@ button {
     display: block;
     margin: 1em auto;
 }
+
+#body-id {
+    position: relative;
+}
+.simple-keyboard {
+    position: absolute !important;
+    bottom: 0;
+    display: none;
+}
+
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none !important;
+}

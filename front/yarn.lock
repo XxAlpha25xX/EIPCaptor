@@ -912,6 +912,13 @@
   "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.256.tgz"
   "version" "1.4.256"
 
+"electron-virtual-keyboard@^1.0.7":
+  "integrity" "sha512-FJmdYvhPAZwQCL0judu1OHZx8lBfpfhzRD2WAXUCqRzhff9fbpHVkw9fbMfLqJElgPOhto9x0+sJu3hDpYYRwg=="
+  "resolved" "https://registry.npmjs.org/electron-virtual-keyboard/-/electron-virtual-keyboard-1.0.7.tgz"
+  "version" "1.0.7"
+  dependencies:
+    "jquery" "^3.3.1"
+
 "electron@^19.0.0":
   "integrity" "sha512-VXwqLQxuIUr0SI8vOYDj5OLPwtKa/trn5DVKd/BFGT/U/IerfVoSZuydGLOjSL5yJlckfmKQpiq+8PW4gI8hXA=="
   "resolved" "https://registry.npmjs.org/electron/-/electron-19.0.0.tgz"
@@ -1563,6 +1570,11 @@
     "@types/node" "*"
     "merge-stream" "^2.0.0"
     "supports-color" "^8.0.0"
+
+"jquery@^3.3.1", "jquery@^3.6.1":
+  "integrity" "sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.1.tgz"
+  "version" "3.6.1"
 
 "js-base64@^2.4.9":
   "integrity" "sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ=="

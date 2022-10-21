@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://xxxx 'unsafe-inline' 'unsafe-eval';">
   <title>HYHs</title>
   <link href="./APIConnection.css" rel="stylesheet">
   <link href="../Sensor.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../public/virtual-keyboard.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
 </head>
 
 <body>
@@ -17,7 +18,10 @@
     <h3 class="warn" id="invalid">Invalid password or email</h3>
     <button type="button" id="login"><h3>Login</h3></button>
   </form>
+  <div class="simple-keyboard invisible" id="keyboard-layout"></div>
   <button id="quit"><h3>QUIT</h3></button>
+  <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-keyboard-layouts@latest/build/index.min.js"></script>
   <script src="APIConnection.js"></script>
 </body>
 

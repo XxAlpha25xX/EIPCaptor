@@ -1,11 +1,16 @@
 const { app, BrowserWindow, ipcMain, session } = require('electron');
 const path = require('path');
 const axios = require('axios').default;
+var $ = require( "jquery" );
+
+let vkb;
 // const { setupVirtualKeyboard } = require('electron-secure-virtual-keyboard');
 
 // var virtualKeyboard = null;
 // virtualKeyboard = setupVirtualKeyboard(ipcMain);
 
+const { setupVirtualKeyboard } = require('electron-secure-virtual-keyboard');
+var virtualKeyboard;
 
 var win = null;
 var user = 'You are not logged in.';
@@ -21,11 +26,12 @@ const createWindow = () => {
             enableRemoteModule: false,
             preload: path.join(__dirname, 'preload.js'),
         },
-        fullscreen: true,
+       // fullscreen: true,
         width: 480,
         height: 320
     });
     win.loadFile('./page/InternetConnection/InternetConnection.html');
+    virtualKeyboard = setupVirtualKeyboard(ipcMain);
 
     win.webContents.openDevTools();
 };
