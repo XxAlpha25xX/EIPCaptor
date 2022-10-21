@@ -19,21 +19,24 @@ var sensor = 'No sensor'
 API_URL = 'http://x2023hearyourhome520328821002.francecentral.cloudapp.azure.com:8000'
 
 const createWindow = () => {
-    win = new BrowserWindow({
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-            enableRemoteModule: false,
-            preload: path.join(__dirname, 'preload.js'),
-        },
-       // fullscreen: true,
-        width: 480,
-        height: 320
-    });
-    win.loadFile('./page/InternetConnection/InternetConnection.html');
+    setTimeout(() => {
+        win = new BrowserWindow({
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false,
+                enableRemoteModule: false,
+                preload: path.join(__dirname, 'preload.js'),
+            },
+           // fullscreen: true,
+            width: 480,
+            height: 320
+        });
+        win.loadFile('./page/InternetConnection/InternetConnection.html');
+    }, 20 * 1000)
+
     virtualKeyboard = setupVirtualKeyboard(ipcMain);
 
-    win.webContents.openDevTools();
+   // win.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {
