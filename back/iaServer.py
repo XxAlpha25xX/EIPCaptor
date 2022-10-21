@@ -14,14 +14,9 @@ import requests
 
 IS_PROD = True
 
-MODEL_PATH = "model.h5"
-CLASS_PATH = "classes.npy"
-OUTPUT_PATH = "output.wav"
-
-MODEL_PATH_PROD = "/home/hyh/Documents/HYH-IA/model.h5"
-CLASS_PATH_PROD = "/home/hyh/Documents/HYH-IA/classes.npy"
-OUTPUT_PATH_PROD = "/home/hyh/Documents/HYH-IA/output.wav"
-
+MODEL_PATH = "/home/hyh/Documents/HYH-IA/model.h5"
+CLASS_PATH = "/home/hyh/Documents/HYH-IA/classes.npy"
+OUTPUT_PATH = "/home/hyh/Documents/HYH-IA/output.wav"
 
 LAST_PREDICTION = ""
 SAMPLE_RATE = 44100
@@ -92,7 +87,6 @@ def terminate():
 
 @app.route("/", methods=['GET'])
 def getLastPrediction():
-    setEnvironement()
     try:
         myrecording = sd.rec(int(SECONDS * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=2)
         sd.wait()
