@@ -26,7 +26,7 @@ OUTPUT_PATH_PROD = "/home/hyh/Documents/HYH-IA/output.wav"
 LAST_PREDICTION = ""
 SAMPLE_RATE = 44100
 SECONDS = 4
-SHAPE_MFCC = (40, 300)
+SHAPE_MFCC = (40,)
 IS_ACTIVE = True
 
 def mfcc_extract(filename):
@@ -45,7 +45,7 @@ def mfcc_extract(filename):
         return None
     pad_mfccs = pad_mfccs.reshape(40, 300, 1)
     print("Shape of mfcc pad = ", pad_mfccs.shape)
-    return pad_mfccs
+    return mfccsscaled
 
 
 def printClass(le, i):
